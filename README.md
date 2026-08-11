@@ -12,6 +12,10 @@ A bilingual, responsive portfolio demo for small service businesses. It connects
 
 All names, figures, customers, and transactions in this public demo are fictional. No real client, contract, or payment data is included.
 
+## Product benchmark
+
+The workflow and presentation were informed by a read-only review of established service-business CRM, project, and invoicing products. See [benchmark notes](docs/benchmark-notes.md) for the references, adopted patterns, deliberate differences, and the reusable portfolio quality gate.
+
 ## Local development
 
 ```bash
