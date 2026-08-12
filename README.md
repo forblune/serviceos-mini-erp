@@ -2,8 +2,8 @@
 
 A bilingual, responsive portfolio demo for small service businesses. It connects the operating loop from quote to project delivery, billing, revision triage, and audit history.
 
-- Live demo: https://forblune-serviceos.rjsgml13486.chatgpt.site
-- GitHub Pages: https://forblune.github.io/serviceos-mini-erp/
+- Live demo: https://serviceos.forblune.com/
+- Legacy mirror: https://forblune.github.io/serviceos-mini-erp/
 - Korean / English UI
 - Owner, operations, and finance role views
 - Projects, invoices, collections, revisions, and audit history
