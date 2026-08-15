@@ -20,7 +20,7 @@ type Project = {
 
 const copy = {
   ko: {
-    demo: "가상 데이터 기반 공개 데모",
+    demo: "기능 시연용 샘플 워크스페이스 · 모든 값은 가상",
     overview: "개요",
     projects: "프로젝트",
     finance: "청구·수금",
@@ -31,16 +31,16 @@ const copy = {
     titleLine1: "견적부터 수금까지,",
     titleLine2: "흩어진 운영을 한 흐름으로.",
     subtitle:
-      "소규모 서비스업의 고객·견적·프로젝트·청구·수정 요청을 연결하는 반응형 Mini ERP 데모입니다.",
+      "실제 고객·계약·매출이 아닌 샘플 값으로 견적·프로젝트·청구·수정 요청의 연결 방식을 보여줍니다.",
     newQuote: "새 견적 만들기",
-    thisMonth: "이번 달 확정 매출",
-    outstanding: "미수금",
-    activeProjects: "진행 프로젝트",
-    sla: "응답 SLA",
-    vsLastMonth: "전월 대비",
-    dueThisWeek: "이번 주 수금 예정",
-    onSchedule: "일정 정상",
-    within24h: "24시간 이내",
+    thisMonth: "샘플 확정 매출",
+    outstanding: "샘플 미수금",
+    activeProjects: "샘플 진행 프로젝트",
+    sla: "샘플 응답 SLA",
+    vsLastMonth: "가상 전월 대비",
+    dueThisWeek: "샘플 수금 예정",
+    onSchedule: "샘플 일정 상태",
+    within24h: "샘플 기준 24시간",
     revenueFlow: "매출 흐름",
     pipeline: "업무 파이프라인",
     attention: "오늘 확인할 항목",
@@ -93,7 +93,7 @@ const copy = {
     currency: "KRW",
   },
   en: {
-    demo: "Public demo with fictional data",
+    demo: "Sample workspace for feature review · all values are fictional",
     overview: "Overview",
     projects: "Projects",
     finance: "Billing",
@@ -104,16 +104,16 @@ const copy = {
     titleLine1: "One operating flow,",
     titleLine2: "from quote to collection.",
     subtitle:
-      "A responsive Mini ERP demo connecting customers, quotes, projects, invoices, and revision requests for service businesses.",
+      "A feature walkthrough using fictional records—not real clients, contracts, or revenue—to show how quotes, projects, invoices, and revisions connect.",
     newQuote: "Create quote",
-    thisMonth: "Confirmed this month",
-    outstanding: "Outstanding",
-    activeProjects: "Active projects",
-    sla: "Response SLA",
-    vsLastMonth: "vs. last month",
-    dueThisWeek: "Due this week",
-    onSchedule: "On schedule",
-    within24h: "within 24 hours",
+    thisMonth: "Sample confirmed revenue",
+    outstanding: "Sample outstanding",
+    activeProjects: "Sample active projects",
+    sla: "Sample response SLA",
+    vsLastMonth: "fictional month comparison",
+    dueThisWeek: "sample collection due",
+    onSchedule: "sample schedule status",
+    within24h: "sample 24-hour rule",
     revenueFlow: "Revenue flow",
     pipeline: "Work pipeline",
     attention: "Needs attention today",
@@ -172,64 +172,64 @@ const projects: Project[] = [
     id: "PRJ-024",
     titleKo: "다국어 예약 사이트 개선",
     titleEn: "Multilingual booking site refresh",
-    client: "Northstar Studio",
+    client: "SAMPLE-CLIENT-01",
     status: "active",
     progress: 64,
     due: "08.16",
     amount: 4800000,
-    owner: "Mina",
+    owner: "OWNER-A",
   },
   {
     id: "PRJ-025",
     titleKo: "운영 대시보드 구축",
     titleEn: "Operations dashboard build",
-    client: "Arc Foods",
+    client: "SAMPLE-CLIENT-02",
     status: "qa",
     progress: 88,
     due: "08.13",
     amount: 3200000,
-    owner: "Joon",
+    owner: "OWNER-B",
   },
   {
     id: "PRJ-026",
     titleKo: "고객 포털 반응형 수정",
     titleEn: "Client portal responsive fixes",
-    client: "Plainworks",
+    client: "SAMPLE-CLIENT-03",
     status: "planned",
     progress: 18,
     due: "08.22",
     amount: 1800000,
-    owner: "Mina",
+    owner: "OWNER-A",
   },
   {
     id: "PRJ-027",
     titleKo: "문의 자동분류 프로토타입",
     titleEn: "Inquiry triage prototype",
-    client: "Blue Orchard",
+    client: "SAMPLE-CLIENT-04",
     status: "active",
     progress: 46,
     due: "08.20",
     amount: 3000000,
-    owner: "Joon",
+    owner: "OWNER-B",
   },
   {
     id: "PRJ-028",
     titleKo: "주문 관리자 화면 QA",
     titleEn: "Order admin QA sprint",
-    client: "Morrow Market",
+    client: "SAMPLE-CLIENT-05",
     status: "qa",
     progress: 94,
     due: "08.12",
     amount: 1200000,
-    owner: "Mina",
+    owner: "OWNER-A",
   },
 ];
 
 const invoices = [
-  { id: "INV-2608-018", client: "Northstar Studio", amount: 2400000, issued: "08.02", due: "08.16", status: "pending" },
-  { id: "INV-2608-017", client: "Arc Foods", amount: 3200000, issued: "08.01", due: "08.12", status: "paid" },
-  { id: "INV-2607-042", client: "Plainworks", amount: 1800000, issued: "07.22", due: "08.05", status: "overdue" },
-  { id: "INV-2607-039", client: "Morrow Market", amount: 1200000, issued: "07.18", due: "08.01", status: "paid" },
+  { id: "INV-2608-018", client: "SAMPLE-CLIENT-01", amount: 2400000, issued: "08.02", due: "08.16", status: "pending" },
+  { id: "INV-2608-017", client: "SAMPLE-CLIENT-02", amount: 3200000, issued: "08.01", due: "08.12", status: "paid" },
+  { id: "INV-2607-042", client: "SAMPLE-CLIENT-03", amount: 1800000, issued: "07.22", due: "08.05", status: "overdue" },
+  { id: "INV-2607-039", client: "SAMPLE-CLIENT-05", amount: 1200000, issued: "07.18", due: "08.01", status: "paid" },
 ] as const;
 
 const tickets = [
@@ -240,10 +240,10 @@ const tickets = [
 ] as const;
 
 const auditEvents = [
-  { time: "14:32", actor: "Mina", actionKo: "PRJ-025를 검수 단계로 이동", actionEn: "Moved PRJ-025 to QA", meta: "Project · stage" },
-  { time: "13:48", actor: "Joon", actionKo: "T-108을 하자로 분류", actionEn: "Classified T-108 as a defect", meta: "Support · classification" },
+  { time: "14:32", actor: "OWNER-A", actionKo: "PRJ-025를 검수 단계로 이동", actionEn: "Moved PRJ-025 to QA", meta: "Project · stage" },
+  { time: "13:48", actor: "OWNER-B", actionKo: "T-108을 하자로 분류", actionEn: "Classified T-108 as a defect", meta: "Support · classification" },
   { time: "11:06", actor: "Finance", actionKo: "INV-2608-017 수금 완료 처리", actionEn: "Marked INV-2608-017 as paid", meta: "Finance · payment status" },
-  { time: "09:21", actor: "Mina", actionKo: "PRJ-024 마일스톤 수정", actionEn: "Updated PRJ-024 milestone", meta: "Project · milestone" },
+  { time: "09:21", actor: "OWNER-A", actionKo: "PRJ-024 마일스톤 수정", actionEn: "Updated PRJ-024 milestone", meta: "Project · milestone" },
 ] as const;
 
 const rolePermissions: Record<Role, View[]> = {
@@ -616,7 +616,7 @@ export default function Home() {
           <button className="backdrop-dismiss" onClick={() => setQuoteOpen(false)} aria-label={t.cancel} />
           <form className="quote-modal" onSubmit={handleQuote}>
             <div className="modal-heading"><div><span className="eyebrow">LOCAL DRAFT</span><h2>{t.quoteTitle}</h2></div><button type="button" onClick={() => setQuoteOpen(false)} aria-label={t.cancel}>×</button></div>
-            <label>{t.customer}<input required value={quote.customer} onChange={(event) => setQuote({ ...quote, customer: event.target.value })} placeholder="Northstar Studio" /></label>
+            <label>{t.customer}<input required value={quote.customer} onChange={(event) => setQuote({ ...quote, customer: event.target.value })} placeholder="SAMPLE-CLIENT-01" /></label>
             <label>{t.service}<input required value={quote.service} onChange={(event) => setQuote({ ...quote, service: event.target.value })} placeholder={language === "ko" ? "반응형 웹 개선" : "Responsive web refresh"} /></label>
             <label>{t.amount}<input required inputMode="numeric" value={quote.amount} onChange={(event) => setQuote({ ...quote, amount: event.target.value.replace(/[^0-9]/g, "") })} placeholder="2400000" /></label>
             <p className="form-boundary">● {t.localOnly} · {t.demoBoundary}</p>
