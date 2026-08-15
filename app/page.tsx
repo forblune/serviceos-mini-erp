@@ -590,8 +590,9 @@ export default function Home() {
       </main>
 
       {selectedProject && (
-        <div className="drawer-backdrop" onClick={() => setSelectedProject(null)}>
-          <aside className="detail-drawer" role="dialog" aria-modal="true" aria-label={t.detail} onClick={(event) => event.stopPropagation()}>
+        <div className="drawer-backdrop">
+          <button className="backdrop-dismiss" onClick={() => setSelectedProject(null)} aria-label={t.cancel} />
+          <aside className="detail-drawer" role="dialog" aria-modal="true" aria-label={t.detail}>
             <button className="close-button" onClick={() => setSelectedProject(null)} aria-label={t.cancel}>×</button>
             <span className="eyebrow">{selectedProject.id}</span>
             <h2>{language === "ko" ? selectedProject.titleKo : selectedProject.titleEn}</h2>
@@ -611,8 +612,9 @@ export default function Home() {
       )}
 
       {quoteOpen && (
-        <div className="modal-backdrop" onClick={() => setQuoteOpen(false)}>
-          <form className="quote-modal" onSubmit={handleQuote} onClick={(event) => event.stopPropagation()}>
+        <div className="modal-backdrop">
+          <button className="backdrop-dismiss" onClick={() => setQuoteOpen(false)} aria-label={t.cancel} />
+          <form className="quote-modal" onSubmit={handleQuote}>
             <div className="modal-heading"><div><span className="eyebrow">LOCAL DRAFT</span><h2>{t.quoteTitle}</h2></div><button type="button" onClick={() => setQuoteOpen(false)} aria-label={t.cancel}>×</button></div>
             <label>{t.customer}<input required value={quote.customer} onChange={(event) => setQuote({ ...quote, customer: event.target.value })} placeholder="Northstar Studio" /></label>
             <label>{t.service}<input required value={quote.service} onChange={(event) => setQuote({ ...quote, service: event.target.value })} placeholder={language === "ko" ? "반응형 웹 개선" : "Responsive web refresh"} /></label>
