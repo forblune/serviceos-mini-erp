@@ -24,6 +24,8 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-geist-sans), "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 button, input, select { font: inherit; }
